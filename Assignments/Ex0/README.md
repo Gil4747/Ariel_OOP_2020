@@ -1,4 +1,4 @@
-author :Gil Thioni (:
+author :Gil Thioni 
 
 university class project of an implementation of (undirectional) unweighted graph.
 
@@ -121,7 +121,11 @@ each class represents a diffrent part of the graph structer.
         returns the length of the shortest path between  node src to node dest.
         im using priority queue to get every node visit by its rank from node src to node dest. 
         note: i overrided compare function to make PQ to works like an MinHeap.
-        O(V*E) (visit all nighbers of all nodes in the graph) Note:V=total nodes number,E=total edges number.
+        O(V*E) (visit all nighbers of all nodes in the graph) 
+	Note: V = total nodes number, E = total edges number.
+	Note:true for both shortestPathDist methods!
+	
+	thanks (;
         
        
          

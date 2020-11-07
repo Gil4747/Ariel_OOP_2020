@@ -1,4 +1,4 @@
-author :Gil Thioni 
+Author :Gil Thioni 
 
 university class project of an implementation of (undirectional) unweighted graph.
 

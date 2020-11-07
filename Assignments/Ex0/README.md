@@ -121,7 +121,7 @@ each class represents a diffrent part of the graph structer.
         returns the length of the shortest path between  node src to node dest.
         im using priority queue to get every node visit by its rank from node src to node dest. 
         note: i overrided compare function to make PQ to works like an MinHeap.
-        O(N*V) (all nighbers of all nodes in the graph)
+        O(V*E) (visit all nighbers of all nodes in the graph) Note:V=total nodes number,E=total edges number.
         
        
          

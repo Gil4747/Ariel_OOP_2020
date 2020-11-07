@@ -2,7 +2,7 @@ author :Gil Thioni (:
 
 university class project of an implementation of (undirectional) unweighted graph.
 
-in the project we implements three class.
+in the project we implements three classes.
 each class represents a diffrent part of the graph structer.
 
 (1) NodeData - my implemetiton of the interface node_data.

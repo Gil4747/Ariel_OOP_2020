@@ -34,20 +34,21 @@ each class represents a diffrent part of the graph structer.
      time complicity - O(1) (by hashmap method)
      
     *hasNi(int key) - This method adds the node_data (t) to this node_data.
-	    accurding to the Prof this method is wrongly designed and was used mainly for educational example - to be improved in next assiment.
-      time complicity - O(1) (by hashmap method)
+     accurding to the Prof this method is wrongly designed and was used 
+     mainly for educational example - to be improved in next assiment.
+     time complicity - O(1) (by hashmap method)
       
     *removeNode(node_data node) - This method Removes the edge between this.node to node_data node.
-    time complicity - O(1) (by hashmap method)
+     time complicity - O(1) (by hashmap method)
     
     *getInfo() - this method return the remark (meta data) associated with this node.
-    time complicity - O(1) (by hashmap method)
+     time complicity - O(1) (by hashmap method)
     
     *setInfo() - this method allows changing the remark (meta data) associated with this node.
-    time complicity - O(1) (by hashmap method)
+     time complicity - O(1) (by hashmap method)
     
     *getTag() - geting Temporal data (aka color: e,g, white, gray, black) 
-	   which can be used be algorithms.
+     which can be used be algorithms.
      time complicity - O(1) (by hashmap method)
      
  (2) Graph_DS - my implemetiton of the interface graph,represents an undirectional unweighted graph.
@@ -62,7 +63,8 @@ each class represents a diffrent part of the graph structer.
      *getNode(int key) - this method returns the node_data by the node_id (key).
       time complicity - O(1) (by hashmap method)
      
-     *hasEdge(int node1,int node2) - the method returns true if there is an edge between node1 and node2,otherwise returns false.
+     *hasEdge(int node1,int node2) - the method returns true if there is an edge
+      between node1 and node2,otherwise returns false.
       time complicity - O(1) (by hashmap method)
      
      *addNode(node_data n) - method to add a new node to the graph with the given node_data.
@@ -110,11 +112,13 @@ each class represents a diffrent part of the graph structer.
        *copy() - Compute a deep copy of this graph.
        O(N) (Deep copy required O(1) for every new node created and added to new graph)
        
-       *isConnected() - my implemetiton of the BFS algo. this method Returns true if there is a valid path from EVREY node to each
+       *isConnected() - my implemetiton of the BFS algo. this method Returns
+        true if there is a valid path from EVREY node to each
         other node in undirectional graph.
         O(N) (get to all nodes in graph note:N=V)
         
-       *shortestPathDist(int src,int dest) - my implemetiton of the dikstrka algo. returns the length of the shortest path between  node src to node dest.
+       *shortestPathDist(int src,int dest) - my implemetiton of the dikstrka algo.
+        returns the length of the shortest path between  node src to node dest.
         im using priority queue to get every node visit by its rank from node src to node dest. 
         note: i overrided compare function to make PQ to works like an MinHeap.
         O(N*V) (all nighbers of all nodes in the graph)

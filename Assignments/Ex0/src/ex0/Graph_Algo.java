@@ -1,3 +1,4 @@
+
 import java.util.*;
 
 
@@ -94,13 +95,17 @@ public class Graph_Algo implements graph_algorithms {
 		return - Integer.compare(o2.getDist(),o1.getDist());
 	}
 	});
-     NodeData temp=(NodeData)Gds.getV().iterator().next();
+     NodeData temp=(NodeData)Gds.getNode(src);
      temp.setTag(black);
 	 queue.add(temp);
 	 temp.setDist(0);
 		   
 	 while(!queue.isEmpty()) {
 	      temp=queue.poll();
+	      if(temp.getKey()==dest) {
+	    	temp.setTag(black);
+	    	  break;
+	      }
 		  Iterator<node_data> pathFirst=temp.getNi().iterator();
 		  
 		  while(pathFirst.hasNext()) {
@@ -115,6 +120,8 @@ public class Graph_Algo implements graph_algorithms {
 		  }
 		  temp.setTag(black);
 	 }
+	 if(Gds.getNode(dest).getTag()!=black)
+		 return -1;
 	 NodeData ansD= (NodeData)Gds.getNode(dest);
 	 NodeData ansS= (NodeData)Gds.getNode(src);
 	 int ans=ansS.getDist()+ansD.getDist();
@@ -133,7 +140,7 @@ public class Graph_Algo implements graph_algorithms {
 	 */
 	@Override
   public List<node_data> shortestPath(int src, int dest) {
-	 if(src==dest ||!Gds.getMap().containsKey(src) || !Gds.getMap().containsKey(dest))
+	 if(!Gds.getMap().containsKey(src) || !Gds.getMap().containsKey(dest))
 		  return null;
 	  List<node_data> L=new LinkedList<node_data>();  
 	  Gds.restDist();
@@ -172,6 +179,8 @@ public class Graph_Algo implements graph_algorithms {
 		   if(temp.getKey()==dest)
 			  break;
 	   }
+	  if(Gds.getNode(dest).getTag()!=black)
+			 return null;
 	  NodeData ans= (NodeData)Gds.getNode(dest);
 	  return ans.getLis();
 		 

@@ -1,3 +1,4 @@
+
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -74,12 +75,13 @@ public class Graph_DS implements graph {
    */
   @Override
   public void connect(int node1, int node2) {
+	  if(map.containsKey(node1)&& map.containsKey(node2)) {
 	 if(!(map.get(node1).getNi().contains((map.get(node2)))) && node1!=node2){
 		  map.get(node1).addNi(map.get(node2));
 		  map.get(node2).addNi(map.get(node1));
 		  ModeCount++;
 		  edg++;
-		
+	 }
 	 }
   }
   /**
@@ -119,7 +121,6 @@ public class Graph_DS implements graph {
 	  int c=map.get(key).getNi().size();
 	  edg=edg-(c);
 	  Iterator<node_data> x=map.get(key).getNi().iterator();
-	 //node_data tempN;
 	  while(x.hasNext()) {
 			  x.next().getNi().remove(map.get(key));
 	  }
